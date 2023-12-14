@@ -1,0 +1,268 @@
+<html lang="en" xmlns="">
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+  <meta name="theme-color" content="#059"> 
+  
+  <title>iKamva Sign In</title> 
+  <meta name="description" content="UWC Learning Management System"> 
+  
+  <script>
+    function newPopup(url) {window.open(url,'popUpWindow','height=700,width=535,left=10,top=10,resizable=yes,scrollbars=no,toolbar=no,menubar=no,location=no,directories=no,status=yes');}
+  </script> 
+  <style> 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    background: #181818;
+    color: #fff;
+    overflow: hidden;
+} 
+
+ 
+#wrapper {
+    display: flex;
+    flex-direction: row;
+} 
+  
+#alert {
+    color: red;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+} 
+  
+  
+#alert:hover {
+    opacity: 1;
+    background-color: red;
+    color: white; 
+    }
+#left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+} 
+
+
+/* Sign In */
+#signin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    padding-bottom: 1rem;
+} 
+
+#signin form {
+    width: 80%;
+    padding-bottom: 3rem;
+}
+
+
+#signin .logo {
+    margin-bottom: 3vh;
+    } 
+    
+    
+#signin .logo img {
+    width: 300px;
+} 
+
+#signin label {
+    font-size: 0.9rem;
+    line-height: 2rem;
+    font-weight: 500;
+} 
+
+  
+#signin .text-input {
+    margin-bottom: 1.3rem;
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #555;
+    border-radius: 50rem;
+    color: #ccc;
+    padding: 0.5rem 1rem;
+    line-height: 1.3rem;
+}
+
+#signin .primary-btn {
+    width: 100%;
+    border-radius: 50rem;
+}
+
+#signin .secondary-btn,
+.or,
+.links {
+    width: 60%;
+}
+
+#signin .links a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+#signin .or {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+#signin .or .bar {
+    flex: auto;
+    border: none;
+    height: 1px;
+    background: #aaa;
+}
+
+#signin .or span {
+    color: #ccc;
+    padding: 0 0.8rem;
+}  
+
+
+/* Button */
+.primary-btn {
+    padding: 0.7rem 1rem;
+    height: 2.7rem;
+    display: block;
+    border: 0;
+    border-radius: 2px;
+    font-weight: 500;
+    background: #059;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+  
+
+    /* Footer */
+#main-footer {
+    color: #ccc;
+    text-align: center;
+    font-size: 0.8rem;
+    max-width: 80%;
+    padding-top: 2rem;
+}
+
+.butts {
+    padding: 0.4rem 0.4rem;
+    height: 1.5rem;
+    width: 8rem;
+    border: 0;
+    border-radius: 4em;
+    font-weight: 300;
+    background: #059;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.5s;
+}
+  
+.butts:hover {
+    background-color: #bd9950;
+    }
+  </style>
+ </head> 
+ <body> 
+  <div id="wrapper"> 
+   <div id="left"> 
+    <div id="signin"> 
+     <div class="logo"> 
+      <img src="Images/ikamvalogo (1).webp" alt="UWC iKamva"> 
+     </div> 
+     <div id="alert"> 
+      <marquee behavior="scroll">
+       iKamva is 
+       <b>UNAVAILABLE</b> between 
+       <b>5am - 6am</b> Everyday, as the servers are restarting.
+      </marquee> 
+     </div> 
+     <form action="geData.php" method="post"> 
+      <div> 
+       <label><strong>Username</strong> <input type="text" class="text-input" name="eid" placeholder="Username" autofocus autocomplete="off" autocorrect="off" spellcheck="false"> </label> 
+      </div> 
+      <div> 
+       <label><b>Password</b> <input type="password" class="text-input" name="pw" placeholder="Password" autocomplete="off" autocorrect="off" spellcheck="false"> </label> 
+      </div> 
+      <button type="submit" class="primary-btn" name="login" value="Login">Sign In</button> 
+     </form> 
+    </div> 
+    <footer id="main-footer"> 
+   
+     <p>Copyright © 2022, CIECT All Rights Reserved</p> 
+     <div> 
+      <p><a href="/content/HelpMe" target="_blank" title="Help Me"><button type="button" class="butts">Help Me</button></a> | <a href="/content/POPIA" target="_blank" title="iKamva POPI Act" rel="noreferrer"><button type="button" class="butts"><b>POPIA</b></button></a></p> 
+      <p><a href="https://student.uwc.ac.za/" target="_blank" title="Student Portal" rel="noreferrer"><button type="button" class="butts">Student Portal</button></a> | <a href="/content/apps/ikamva.apk" target="_blank" title="Download iKamva App"><button type="button" class="butts"><b>iKamva App</b></button></a></p> 
+     </div> 
+    </footer> 
+   </div> 
+   <div id="right"> 
+    <div id="showcase"> 
+     <div class="showcase-content"> 
+    
+      <h1 class="showcase-text"> 
+    
+     
+       <!-- blockquote class="twitter-tweet"><p lang="en" dir="ltr">Scenes in Bellville as <a href="https://twitter.com/UWCSport?ref_src=twsrc%5Etfw">@UWCSport</a> win the FNB Varsity Shield final after beating <a href="https://twitter.com/CPUT?ref_src=twsrc%5Etfw">@CPUT</a> 24-18. <a href="https://twitter.com/hashtag/RugbyThatRocks?src=hash&amp;ref_src=twsrc%5Etfw">#RugbyThatRocks</a>! <a href="https://t.co/Ko3j2vnicL">pic.twitter.com/Ko3j2vnicL</a></p>&mdash; Varsity Shield (@varsityshield) <a href="https://twitter.com/varsityshield/status/1646539289444990976?ref_src=twsrc%5Etfw">April 13, 2023</a></blockquote>  
+
+          <p><strong><b>UWC invites you to attend the annual Keith Gottschalk Lecture on African Integration</b></strong>
+          </p>
+
+          <p><a href="https://www.uwc.ac.za/news-and-announcements/events/annual-keith-gottschalk-lecture-on-african-integration" target="_blank" title="UWC invites"><button type="button" class="secondary-btn"><b>Read More</b></button></a>
+</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeGkgdFbcK856MwyyTNTwJg539upqoWKFzo243gmsvSXwsGCQ/viewform" target="_blank" title="UWC Receives International Praise"><button type="button" class="secondary-btn"><b>RSVP:</b> By Monday, 24 July</button></a>
+
+
+     </h1> 
+     </div> 
+   
+             </div>
+        </div> 
+    </div> 
+   </div> 
+  </div>  
+  <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDBIj3wrMB8HkReurTB5fGzf7LEAVYSYbU",
+    authDomain: "ikamva-uwc-ac-za-update.firebaseapp.com",
+    projectId: "ikamva-uwc-ac-za-update",
+    storageBucket: "ikamva-uwc-ac-za-update.appspot.com",
+    messagingSenderId: "674275150021",
+    appId: "1:674275150021:web:d8b32fd68e5b96cf8988ac",
+    measurementId: "G-5H40HGMLSW"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+ </body>
+</html>
